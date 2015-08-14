@@ -10647,6 +10647,7 @@ function go () {
     console.log(data);
     d3.select("#body-text").text(data.body);
     d3.select("#author-text").text(data.author);
+    d3.select("#author-score").text(data.score + " points");
   }
 
   var redditmap = {
@@ -10675,8 +10676,11 @@ function go () {
     .attr("id", "viewer")
 
   viewer
-    .append("p")
+    .append("span")
       .attr("id", "author-text")
+  viewer
+    .append("span")
+      .attr("id", "author-score")
 
   viewer
     .append("p")
