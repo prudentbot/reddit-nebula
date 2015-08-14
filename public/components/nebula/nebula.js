@@ -207,7 +207,6 @@ Nebula = function(svgSelector, width, height, userOnMouseover, data, map){
     edge.exit().remove();
 
     node = node.data(nodes, function(d) { return d[internalMap["_id"]];});
-    console.log(nodes);
     node.enter().append("circle")
       .attr("class", "node")
       .attr("r", calculateRadius)
