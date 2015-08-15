@@ -210,7 +210,7 @@ Nebula = function(svgSelector, width, height, userOnMouseover, data, map){
     node.enter().append("circle")
       .attr("class", "node")
       .attr("r", calculateRadius)
-      .attr("fill", function(d){if(!d[internalMap["target_id"]]) {return color_original} else {return color_standard}})
+      .attr("class", function(d){if(!d[internalMap["target_id"]]) {return "color_original"} else {return "color_standard"}})
       .attr("stroke", "black")
       .on("mouseover", onmouseover)
       .call(drag);
