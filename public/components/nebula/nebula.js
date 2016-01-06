@@ -12,6 +12,14 @@ var color_commonAuthor = "red";
 var color_original = "#666699";
 var color_selected = "yellow";
 
+var color_hash = {
+  ".color_standard": color_standard,
+  ".color_commonAuthor": color_commonAuthor,
+  ".color_original": color_original,
+  ".color_selected": color_selected
+};
+
+
 var selected;
 var selectedData;
 var oldCommonAuthors;
@@ -197,6 +205,7 @@ Nebula = function(svgSelector, width, height, userOnMouseover, data, map){
 
 
   var start = function(){
+    console.log(document.styleSheets[0]);
     edge = edge.data(edges);
     edge.enter().append("line")
       .attr("class", "edge")
@@ -256,4 +265,17 @@ Nebula = function(svgSelector, width, height, userOnMouseover, data, map){
   result.removeNode = removeNode;
 
   return result;
+}
+
+function addCSSRule(styleSheet, selector, rules, index) {
+	if("insertRule" in styleSheet) {
+		styleSheet.insertRule(selector + "{" + rules + "}", index);
+	}
+	else if("addRule" in styleSheet) {
+		styleSheet.addRule(selector, rules, index);
+	}
+}
+
+for(color in color_hash) {
+  addCSSRule(document.styleSheets[0], color, "fill:"+color_hash[color]+";");
 }
