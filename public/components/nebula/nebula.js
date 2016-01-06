@@ -92,12 +92,11 @@ Nebula = function(svgSelector, width, height, userOnMouseover, data, map){
   }
 
   var onmouseover = function(d){
-
     if(!!selectedData){
       if(!!selectedData[internalMap["target_id"]])
-        selected.attr("fill", color_standard)
+        selected.attr("class", "color_standard")
       else
-        selected.attr("fill", color_original);
+        selected.attr("class", "color_original");
     }
 
     selected = d3.select(this);
@@ -105,14 +104,15 @@ Nebula = function(svgSelector, width, height, userOnMouseover, data, map){
 
     if(!!oldCommonAuthors){
       oldCommonAuthors
-        .attr("fill", function(d){ if(!d[internalMap["target_id"]]) {return color_original} else {return color_standard}})
+        .attr("class", function(d){ if(!d[internalMap["target_id"]]) {return "color_original"} else {return "color_standard"}})
     }
 
     oldCommonAuthors = node
       .filter(function(n) {return n[internalMap["author"]] === d[internalMap["author"]]})
-      .attr("fill", color_commonAuthor)
+      .attr("class", "color_commonAuthor")
 
-    selected.attr("fill", color_selected);
+      selected.attr("class", "color_selected");
+
     userOnMouseover(d);
   }
 
@@ -210,7 +210,7 @@ Nebula = function(svgSelector, width, height, userOnMouseover, data, map){
     node.enter().append("circle")
       .attr("class", "node")
       .attr("r", calculateRadius)
-      .attr("fill", function(d){if(!d[internalMap["target_id"]]) {return color_original} else {return color_standard}})
+      .attr("class", function(d){if(!d[internalMap["target_id"]]) {return "color_original"} else {return "color_standard"}})
       .attr("stroke", "black")
       .on("mouseover", onmouseover)
       .call(drag);

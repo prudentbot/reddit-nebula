@@ -8,4 +8,32 @@ a {
 
 #author-text {
   color: steelblue;
+  display: inline-block;
+  margin-right: 0.5em;
+}
+
+#author-score {
+  color: #888;
+  font-size:x-small;
+}
+
+#body-text {
+  border-left: 1px dotted #DDF;
+  padding-left: 10px;
+}
+
+.color_standard {
+  fill: #808080;
+}
+
+.color_commonAuthor {
+  fill: #FF0000;
+}
+
+.color_original {
+  fill: #666699;
+}
+
+.color_selected {
+  fill: #FFFF00;
 }
