@@ -6,6 +6,10 @@ a {
   color: #00B7FF;
 }
 
+#url-field {
+  display: inline-block;
+}
+
 #author-text {
   color: steelblue;
   display: inline-block;
@@ -22,18 +26,30 @@ a {
   padding-left: 10px;
 }
 
+#viewer {
+  padding: 5px;
+}
+
+.fixed-action-btn.horizontal ul {
+  margin-left: 100px;
+  left:0 !important;
+  right:0 !important;
+  width: auto !important;
+  text-align: left !important;
+}
+
 .color_standard {
-  fill: #808080;
+  /* fill: #808080; */
 }
 
 .color_commonAuthor {
-  fill: #FF0000;
+  /* fill: #FF0000; */
 }
 
 .color_original {
-  fill: #666699;
+  /* fill: #666699; */
 }
 
 .color_selected {
-  fill: #FFFF00;
+  /* fill: #FFFF00; */
 }
