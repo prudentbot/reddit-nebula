@@ -1,4 +1,4 @@
-function go () {
+function go (DATA) {
 
   var translateReddit = function(linkJSON){
 
@@ -126,7 +126,7 @@ function go () {
 
 
   // var nebula = new Nebula("#graph", 800, 600, onmouseover, testdata);
-  nebula = new Nebula("#graph", 800, 600, onmouseover, translateReddit(reddit5), redditmap);
+  nebula = new Nebula("#graph", 800, 600, onmouseover, translateReddit(DATA), redditmap);
 }
 
 function stop() {

@@ -34,14 +34,11 @@
 
   $(document).ready(function() {
     $( '#submit' ).click(function() {
-        stop();
+      stop();
       var urlText = $('#url-input').val() + ".json";
       $.getJSON( urlText, function( data ) {
-        console.log(data);
+        go(data);
         reddit5 = data;
-      })
-      .done(function() {
-        go();
       })
     });
   });
