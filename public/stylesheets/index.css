@@ -37,19 +37,3 @@ a {
   width: auto !important;
   text-align: left !important;
 }
-
-.color_standard {
-  /* fill: #808080; */
-}
-
-.color_commonAuthor {
-  /* fill: #FF0000; */
-}
-
-.color_original {
-  /* fill: #666699; */
-}
-
-.color_selected {
-  /* fill: #FFFF00; */
-}

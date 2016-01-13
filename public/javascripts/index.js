@@ -123,8 +123,6 @@ function go (DATA) {
     .append("p")
       .attr("id", "body-text");
 
-
-
   // var nebula = new Nebula("#graph", 800, 600, onmouseover, testdata);
   nebula = new Nebula("#graph", 800, 600, onmouseover, translateReddit(DATA), redditmap);
 }
