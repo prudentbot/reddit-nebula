@@ -34,14 +34,19 @@
 <script>
 
   $(document).ready(function() {
-    $( '#submit' ).click(function() {
+
+    var get = function() {
       stop();
       var urlText = $('#url-input').val() + ".json";
       $.getJSON( urlText, function( data ) {
         go(data);
         reddit5 = data;
       })
-    });
+    }
+
+    $('#url-input').val("https://www.reddit.com/r/gaming/comments/40o7mk/anti_afk_machine/");
+    get()
+    $( '#submit' ).click(get);
   });
 
 </script>
