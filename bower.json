@@ -19,6 +19,7 @@
     "tests"
   ],
   "dependencies": {
-    "nebula": "~0.1.0"
+    "nebula": "~0.1.0",
+    "linkifyjs": "~1.1.7"
   }
 }

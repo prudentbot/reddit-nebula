@@ -35,42 +35,10 @@ function go (DATA) {
     return a;
   }
 
-  var testdata = [
-    {
-      _id:"1",
-      body:"first!",
-      target_id:null
-    },
-    {
-      _id:"2",
-      body:"second",
-      target_id:"1"
-    },
-    {
-      _id:"3",
-      body:"third",
-      target_id:"1"
-    },
-    {
-      _id:"4",
-      body:"fourther",
-      target_id:"2"
-    },
-    {
-      _id:"5",
-      body:"figth",
-      target_id:"3"
-    },
-    {
-      _id:"6",
-      body:"6th",
-      target_id:"2"
-    }
-  ]
-
   var onmouseover = function(data){
     console.log(data);
     d3.select("#body-text").text(data.body);
+    $("#body-text").linkify();
     d3.select("#author-text").text(data.author);
     d3.select("#author-score").text(data.score + " points ");
     if(data.replies.data !== undefined){
