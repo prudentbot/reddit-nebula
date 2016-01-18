@@ -36,7 +36,6 @@ function go (DATA) {
   }
 
   var onmouseover = function(data){
-    console.log(data);
     d3.select("#body-text").text(data.body);
     $("#body-text").linkify();
     d3.select("#author-text").text(data.author);
