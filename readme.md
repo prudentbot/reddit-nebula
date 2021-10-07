@@ -2,4 +2,4 @@ A test application of [Nebula](https://github.com/prudentbot/nebula) that pulls 
 
 This is a `npm install` and `npm start` kind of deal.    
 
-Also, we're currently taking suggestions for features to implement!
+Working version here: http://reddit-nebula.herokuapp.com/.  You can click/drag the individual nodes, click/drag the screen to pan, or use the mousewheel to zoom in and out.  Use the magnifying glass at the bottom to change threads.
